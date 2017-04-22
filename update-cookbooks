@@ -1,0 +1,26 @@
+#!/bin/bash
+
+REPOS="
+        fs-moodle
+     "
+
+BASE=`pwd`
+if [ ! -d "site-cookbooks" ] ; then
+    echo "Creating site-cookbooks for local storage..."
+    mkdir site-cookbooks
+fi
+for REPO in ${REPOS}; do
+    if [ ! -d "site-cookbooks/${REPO}" ]; then
+        echo "Cloning ${REPO}..."
+        git clone https://github.com/jacksonp2008/${REPO}.git site-cookbooks/${REPO}
+    else
+        echo "Updating existing ${REPO}..."
+        cd ${BASE}/site-cookbooks/${REPO} && git pull && cd ${BASE}
+    fi
+done
+if [ ! -e "Berksfile.lock" ]
+then
+    berks vendor cookbooks
+else
+    berks update && berks vendor cookbooks
+fi
