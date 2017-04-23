@@ -206,7 +206,10 @@
       "username": "vagrant",
       "webroot": "/var/www/html/",
       "data": "/var/moodledata",
-      "sqlrootpass": "xxx"
+      "sqlrootpass": "xxx",
+      "database": "moodle",
+      "user": "moodleuser",
+      "userpw": "xxx"
     }
   },
   "automatic": {
@@ -292,7 +295,7 @@
             "Product Name": "VirtualBox",
             "Version": "1.2",
             "Serial Number": "0",
-            "UUID": "C4B8EC86-ADF6-4E8C-8E04-42811F4A11C8",
+            "UUID": "E338A9E6-66FB-4921-AB4D-21FA657352DF",
             "Wake-up Type": "Power Switch",
             "SKU Number": "Not Specified",
             "Family": "Virtual Machine"
@@ -302,7 +305,7 @@
         "product_name": "VirtualBox",
         "version": "1.2",
         "serial_number": "0",
-        "uuid": "C4B8EC86-ADF6-4E8C-8E04-42811F4A11C8",
+        "uuid": "E338A9E6-66FB-4921-AB4D-21FA657352DF",
         "wake_up_type": "Power Switch",
         "sku_number": "Not Specified",
         "family": "Virtual Machine"
@@ -1032,14 +1035,14 @@
           "size": "20359",
           "refcount": "3"
         },
-        "psmouse": {
-          "size": "106692",
-          "refcount": "0"
-        },
         "ahci": {
           "size": "34091",
           "refcount": "1",
           "version": "3.0"
+        },
+        "psmouse": {
+          "size": "106692",
+          "refcount": "0"
         },
         "libahci": {
           "size": "32716",
@@ -1170,17 +1173,17 @@
           ],
           "encapsulation": "Ethernet",
           "addresses": {
-            "08:00:27:32:A8:07": {
+            "08:00:27:51:23:2E": {
               "family": "lladdr"
             },
-            "172.28.128.3": {
+            "172.28.128.4": {
               "family": "inet",
               "prefixlen": "24",
               "netmask": "255.255.255.0",
               "broadcast": "172.28.128.255",
               "scope": "Global"
             },
-            "fe80::a00:27ff:fe32:a807": {
+            "fe80::a00:27ff:fe51:232e": {
               "family": "inet6",
               "prefixlen": "64",
               "scope": "Link",
@@ -1196,7 +1199,7 @@
               "family": "inet",
               "scope": "link",
               "proto": "kernel",
-              "src": "172.28.128.3"
+              "src": "172.28.128.4"
             },
             {
               "destination": "fe80::/64",
@@ -1249,16 +1252,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "76944",
-              "packets": "585",
+              "bytes": "76130",
+              "packets": "575",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "94196",
-              "packets": "828",
+              "bytes": "93020",
+              "packets": "812",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -1287,7 +1290,7 @@
     },
     "ipaddress": "10.0.2.15",
     "macaddress": "08:00:27:62:D7:1E",
-    "ip6address": "fe80::a00:27ff:fe32:a807",
+    "ip6address": "fe80::a00:27ff:fe51:232e",
     "virtualization": {
       "systems": {
         "vbox": "guest"
@@ -1308,26 +1311,26 @@
         "surplus": "0"
       },
       "total": "1017772kB",
-      "free": "84260kB",
-      "buffers": "43144kB",
-      "cached": "578744kB",
-      "active": "306432kB",
-      "inactive": "496584kB",
-      "dirty": "35604kB",
+      "free": "70708kB",
+      "buffers": "43132kB",
+      "cached": "591008kB",
+      "active": "309056kB",
+      "inactive": "507124kB",
+      "dirty": "35588kB",
       "writeback": "0kB",
-      "anon_pages": "181152kB",
+      "anon_pages": "182056kB",
       "mapped": "13008kB",
-      "slab": "113912kB",
-      "slab_reclaimable": "103340kB",
-      "slab_unreclaim": "10572kB",
-      "page_tables": "3548kB",
+      "slab": "114400kB",
+      "slab_reclaimable": "103708kB",
+      "slab_unreclaim": "10692kB",
+      "page_tables": "3512kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "508884kB",
-      "committed_as": "289084kB",
+      "committed_as": "289160kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "8488kB",
-      "vmalloc_chunk": "34359724540kB",
+      "vmalloc_chunk": "34359724028kB",
       "hugepage_size": "2048kB"
     },
     "cpu": {
@@ -1337,7 +1340,7 @@
         "model": "61",
         "model_name": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
         "stepping": "4",
-        "mhz": "2700.299",
+        "mhz": "2699.999",
         "cache_size": "3072 KB",
         "physical_id": "0",
         "core_id": "0",
@@ -1459,9 +1462,9 @@
         },
         "none": {
           "kb_size": "243941376",
-          "kb_used": "218671160",
-          "kb_available": "25270216",
-          "percent_used": "90%",
+          "kb_used": "230563000",
+          "kb_available": "13378376",
+          "percent_used": "95%",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1709,9 +1712,9 @@
         },
         "/vagrant": {
           "kb_size": "243941376",
-          "kb_used": "218671160",
-          "kb_available": "25270216",
-          "percent_used": "90%",
+          "kb_used": "230563000",
+          "kb_available": "13378376",
+          "percent_used": "95%",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -1958,9 +1961,9 @@
         "none,/vagrant": {
           "device": "none",
           "kb_size": "243941376",
-          "kb_used": "218671160",
-          "kb_available": "25270216",
-          "percent_used": "90%",
+          "kb_used": "230563000",
+          "kb_available": "13378376",
+          "percent_used": "95%",
           "mount": "/vagrant",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2132,9 +2135,9 @@
       },
       "none": {
         "kb_size": "243941376",
-        "kb_used": "218671160",
-        "kb_available": "25270216",
-        "percent_used": "90%",
+        "kb_used": "230563000",
+        "kb_available": "13378376",
+        "percent_used": "95%",
         "mount": "/sys/fs/pstore",
         "total_inodes": "1000",
         "inodes_used": "0",
@@ -2223,7 +2226,7 @@
       "static_hostname": "vagrant-ubuntu-trusty-64",
       "icon_name": "computer-vm",
       "chassis": "vm",
-      "boot_id": "bc5b8279110d452fb561c82f2411a1f8",
+      "boot_id": "e6e71855112b4c018d7a67dee4eb271f",
       "virtualization": "oracle",
       "operating_system": "Ubuntu 14.04.5 LTS",
       "kernel": "Linux 3.13.0-116-generic",
@@ -2420,14 +2423,14 @@
         "logical_block_size": "512"
       }
     },
-    "ohai_time": 1492910459.7965186,
+    "ohai_time": 1492922257.7879539,
     "keys": {
       "ssh": {
-        "host_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCrEdM2h9k3Nb+V5yJvNDic09Cs4Q+ULIQe9UPTzrDMBM75oKYQ+7h9hxpOTcGzmF9FwYQL6myXIF7Bm4XeIkYa6G1t3p2c4GLVTnl8wCz/Mxtaz2NC22P3QL2+TzF9K5J5m+ZHURpFOCyssVEovIp09pPl+UTzmYoA+UunqNCZtom/fEG/R2z71JVy+OTpAutEW+zBkl8hL1AVo3sjx+Vyizflu16my6lqRBe/el2dryxtz/aZREUeZtvaVL8h7ZXpQsUnFYc0vD6b/LQgJh1z7s1Rm7+0pYbwBlEFFdaeaOJgkI3oSS0YuJcWmCdUeAt/ljvgEYVZ0dyZAHG8gevb",
-        "host_dsa_public": "AAAAB3NzaC1kc3MAAACBAJGNyUUXs+p4fhou4RqP8Wu/hGojXEcK3TMMuJzZTZSFV8wvVoker/wOCvw7s8kAH6obIfeTycLh/PCDbtWS3cHkVzXQV4bMeM/3bsZtY3QixMz//6g6iaUF2LEz0DGrTXNYO2nnu61kiOt4naYzS7IfRPT1t2SeatRME+HKgmnRAAAAFQCUSgo9SY7e3T/NvL7aIMvguWK2lQAAAIBIk73YdBjilz4vEhHAIqZipP7z84NI2auXPB1l/Z0fO+D8K3d8P/zApW1W9uxBgZN9FgkkFOjpL5D40Pyi/pPA1dRBeIVL0Wydkl8kOTU4tJQHpqkvKPTPLgU4rDb0TKdJGunn1f2VcHMIEhylQAXx3+mZFrHGMNymhC2vDxHo5QAAAIAnvTNcsQWNBrAmXmGkzSZDRc0pXN8X4lMBcULrqmb7c8L9umryKtFkASMrbsAD0dAfpcclYdqcz6x1IJ3eNt+oPbD0cvI2fsJYC5G1/2+FnFDlBiJ4n+4ovXLbPB1jMoTQjFDe43wXzewPbO7/ZyxHrOixkdVCeKu/5zagkvoe8Q==",
-        "host_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEA+TewU1iJcCpqUv2PO67sD2v3D1qKeFN7owG47RZ0qaBiI1uOfmmzfpP6u625fZU8XHoppxhgQd+Hv7/3CIBk=",
+        "host_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDEMEb2z7r+b6S5AMR423mvjGwclesoN8rDl4K2Acd19IvF+5WnwyCa5PFtGEjgy8bg2lTWnVinnp5M8Y6fT0wvahDKvEzf6mIhDkJDCUEl43zi588l5/aYVwu4fp3JOamFH494fXraEo0o4+5XZ+p+rRJSnGsNLLOFLsMoRY56mBZ2GwIoGqaPeF03bjQEEogN4NF6ZjVxCGNsqFPXDDvfJibcVqr+9iFN6A3tZcdbU/spiE2z02bZ5mDHIRR+QfeO5d8LU025wv984erdTEJXBeEwRh2l5ik889kToAAK5J0GKdA5vVZBJRu4I8Vu251vups7aJlqcrbqR8nohcj1",
+        "host_dsa_public": "AAAAB3NzaC1kc3MAAACBALjD1WiTeTFVzTRlKNIiFPJ+XOD/+k3r41SvPUR8jtgN1Ikl9+0xon4KRcuC+6zceRkR2EYMjy7X0wRYQ8e7p8EBPlg4KytbbYs9ap5jvgWvNxpANaim9l25h+h2o1A23RXOAPNQoStkRk/F5T6DKncskfsdCBkgj/cdJY/tTp4/AAAAFQDjKbmB4DCy5fWogi+5Xd4b3vrhvwAAAIBvRcrLPxAmusXxe1aKlA0IXrpLFw1RY7F76GDvfvOtHb0WvB27xnr7VMtfmI2KS8tgyR8xbbZ2Rc75zW1K73DiKhTguTsMyGbCWCUE/9s+A3GsB0/Gt8FoaFIVJ+tJbmSbKy7lRRqoKcqlkF9E1oB7GpRHKKF2vGIaHw//5QLTwAAAAIEAo0rfVw3ikTxqnO7imiYeIhXQYo+ZK5KgfHN3UKrkWMHSb0o8G9ZjzonmT2Gbwqy0iu9Igs2C4Uh2HaxTcLqQhIAH62f8K4eV2d9T1x66lvlCNrWf+CQbSf9LSkH3qLgUsjwKq2+MSIpqBeKDBc8l5c5EUKZc+w3QEkL4R0FUDOA=",
+        "host_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHFJe9jelHJDeTwCNnRSZAv/bLR2e17Tby0ZVFEmuyeLRYII9uJir9CUZ9s5AhHs3ZjgbZ7yUuFXkgEaqfbK4Lg=",
         "host_ecdsa_type": "ecdsa-sha2-nistp256",
-        "host_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIIFr+2RcGANZUhL5wjQXfWnSStTj+Ghj8skQKYG7S5IF"
+        "host_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAICAB9gK13uoZvnT98IE5hcocewrZFA4ULd1Ven0uFHnM"
       }
     },
     "hostname": "vagrant-ubuntu-trusty-64",
@@ -5071,11 +5074,11 @@
         "arch": "amd64"
       }
     },
-    "uptime_seconds": 60,
-    "uptime": "1 minutes 00 seconds",
-    "idletime_seconds": 31,
-    "idletime": "31 seconds",
-    "shard_seed": 167995734,
+    "uptime_seconds": 54,
+    "uptime": "54 seconds",
+    "idletime_seconds": 25,
+    "idletime": "25 seconds",
+    "shard_seed": 178114405,
     "virtualbox": {
       "host": {
         "revision": "114002",
@@ -5107,7 +5110,7 @@
     ],
     "cookbooks": {
       "fs-moodle": {
-        "version": "0.1.5"
+        "version": "0.1.8"
       },
       "apt": {
         "version": "4.0.2"
