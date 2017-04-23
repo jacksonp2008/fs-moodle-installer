@@ -1,7 +1,7 @@
 # Installer Structure
 -
 Pollock [jacksonp2008@gmail.com](mailto:jacksonp2008@gmail.com)  
-February 2017
+April 2017
 
 Edit 'update-cookbooks' to add any repo's to '/site-cookbooks'
 
@@ -44,24 +44,3 @@ $ sudo dpkg -i chefdk_1.0.3-1_amd64.deb
 ```
 
 ### Ready to Run
-
-```
-In this case using a role 
-
-cat roles/ruby-prep.json 
-{
-  "name": "ruby-prep",
-  "description": "Prep system for Rails Dev",
-  "run_list": [
-    "recipe[vagrant-prep-ruby::default]"
-  ]
-}
-
-sudo chef-client -z -j roles/ruby-prep.json
-
-```
-** Remember to log out/back in to vagrant to initialize any profile changes.
-
-
-
-
