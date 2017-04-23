@@ -1,8 +1,0 @@
-{
-  "name": "ruby-prep",
-  "description": "Prep system for Rails Dev",
-  "run_list": [
-    "recipe[vagrant-prep-ruby::default]"
-  ]
-}
-

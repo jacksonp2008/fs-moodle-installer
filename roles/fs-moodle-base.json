@@ -1,0 +1,7 @@
+{
+  "name": "fs-moodle-base",
+  "description": "Install base moodle the forescout way",
+  "run_list": [
+    "recipe[fs-moodle::default]"
+  ]
+}
